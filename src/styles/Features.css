@@ -1,0 +1,99 @@
+/* ==============================
+   FEATURES STRIP
+   ============================== */
+.features {
+  background: #fff;
+  border-top: 1px solid #e8eef5;
+  border-bottom: 1px solid #e8eef5;
+  position: relative;
+  z-index: 2;
+}
+
+.features__container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 20px 40px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+}
+
+.features__item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 24px;
+  border-right: 1px solid #e8eef5;
+  transition: var(--transition);
+}
+
+.features__item:last-child {
+  border-right: none;
+}
+
+.features__item:hover {
+  background: rgba(0, 75, 135, 0.03);
+}
+
+.features__icon {
+  width: 44px;
+  height: 44px;
+  background: linear-gradient(135deg, var(--pepsi-blue-light), var(--pepsi-blue));
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #fff;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 12px rgba(0, 75, 135, 0.25);
+}
+
+.features__title {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--pepsi-text);
+  margin-bottom: 2px;
+}
+
+.features__desc {
+  font-size: 0.78rem;
+  color: var(--pepsi-text-muted);
+  line-height: 1.4;
+}
+
+/* ==============================
+   RESPONSIVE FEATURES
+   ============================== */
+@media (max-width: 900px) {
+  .features__container {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 16px 20px;
+  }
+
+  .features__item:nth-child(2) {
+    border-right: none;
+  }
+
+  .features__item:nth-child(1),
+  .features__item:nth-child(2) {
+    border-bottom: 1px solid #e8eef5;
+  }
+}
+
+@media (max-width: 480px) {
+  .features__container {
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
+
+  .features__item {
+    border-right: none;
+    border-bottom: 1px solid #e8eef5;
+    padding: 14px 20px;
+  }
+
+  .features__item:last-child {
+    border-bottom: none;
+  }
+}

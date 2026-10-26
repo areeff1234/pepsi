@@ -1,0 +1,5 @@
+/* App.css - Layout wrapper */
+.app {
+  min-height: 100vh;
+  width: 100%;
+}
